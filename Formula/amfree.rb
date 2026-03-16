@@ -1,4 +1,4 @@
-class AmfidPatch < Formula
+class Amfree < Formula
   desc "amfid ObjC swizzle to bypass AMFI code-signature validation (arm64, SIP-off)"
   homepage "https://github.com/retX0/amfree"
   url "https://github.com/retX0/amfree/archive/refs/tags/v0.1.1.tar.gz"
