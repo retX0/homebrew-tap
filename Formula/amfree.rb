@@ -23,8 +23,11 @@ class Amfree < Formula
 
       Usage:
         sudo amfree --path /path/to/your/project/
-        sudo amfree -v --path /path/to/project/   # verbose
-        sudo amfree --list                         # list watched paths
+        sudo amfree --path /path/one/ --path /path/two/   # multiple dirs
+        sudo amfree -v --path /path/to/project/           # verbose
+        sudo amfree --list                                 # list watched paths
+        sudo amfree --hook-verbose on                      # enable hook logging
+        sudo amfree --hook-verbose off                     # disable hook logging
     EOS
   end
 
