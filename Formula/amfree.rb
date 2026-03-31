@@ -1,9 +1,9 @@
 class Amfree < Formula
   desc "amfid ObjC swizzle to bypass AMFI code-signature validation (arm64, SIP-off)"
   homepage "https://github.com/retX0/amfree"
-  url "https://github.com/retX0/amfree/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "81a2814b1dd65821dfe84591b29db51b455af94686cac057451b9bf6581cab10"
-  version "0.1.4"
+  url "https://github.com/retX0/amfree/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "d3aff5b622dc82477d67efe045dac686726cf496fd98efce55be55668f187274"
+  version "0.1.5"
   license "MIT"
 
   # macOS arm64 only — requires SIP disabled and root at run time
