@@ -1,14 +1,13 @@
 class Amfree < Formula
-  desc "amfid ObjC swizzle to bypass AMFI code-signature validation (arm64, SIP-off)"
+  desc "Amfid ObjC swizzle to bypass AMFI code-signature validation (arm64, SIP-off)"
   homepage "https://github.com/retX0/amfree"
-  url "https://github.com/retX0/amfree/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "d3aff5b622dc82477d67efe045dac686726cf496fd98efce55be55668f187274"
-  version "0.1.5"
+  url "https://github.com/retX0/amfree/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "c6e03c17c99970346d123c1f690818b51f5030e8dc7c1f4c760b8138274e954d"
   license "MIT"
 
   # macOS arm64 only — requires SIP disabled and root at run time
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   def install
     system "make", "all"
@@ -32,6 +31,6 @@ class Amfree < Formula
   end
 
   test do
-    assert_predicate bin/"amfree", :exist?
+    assert_path_exists bin/"amfree"
   end
 end
