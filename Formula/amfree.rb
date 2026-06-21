@@ -7,18 +7,21 @@ class Amfree < Formula
 
   # macOS arm64 only — requires SIP disabled and root at run time
   depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: :tahoe
 
   def install
-    system "make", "all"
+    system "make", "all", "GIT_VER=v#{version}"
     bin.install "bin/amfree"
   end
 
   def caveats
     <<~EOS
       amfree requires:
+        • macOS 26.0 or newer on arm64
         • macOS arm64 with SIP debug disabled  (csrutil enable --without debug)
         • root privileges at runtime
+
+      macOS versions older than 26.0 are not supported.
 
       Usage:
         sudo amfree --path /path/to/your/project/
